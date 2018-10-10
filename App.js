@@ -1,27 +1,30 @@
 import React from 'react'
 import { Platform, StatusBar, StyleSheet, View } from 'react-native'
-import { createStore, applyMiddleware } from 'redux'
-import { Provider, connect } from 'react-redux'
-import axios from 'axios'
-import axiosMiddleware from 'redux-axios-middleware'
-import AppNavigator from './src/navigation/AppNavigator'
+import { applyMiddleware, compose, createStore } from 'redux'
+import thunkMiddleware from 'redux-thunk'
 
-import reducer from './src/reducers/index'
+import { Provider } from 'react-redux'
 
-const client = axios.create({
-  baseURL: 'https://api.github.com',
-  responseType: 'json'
-})
+import AppNavigator from './src/navigators/RootStack'
+import Navigation from './src/services/Navigation'
 
-const store = createStore(reducer, applyMiddleware(axiosMiddleware(client)))
+import reducers from './src/reducers'
 
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
+const store = createStore(
+  reducers,
+  composeEnhancers(),
+  applyMiddleware(
+    thunkMiddleware,
+  )
+)
 export default class App extends React.Component {
   render () {
     return (
       <View style={styles.container}>
         {Platform.OS === 'ios' && <StatusBar barStyle="light-content"/>}
         <Provider store={store}>
-          <AppNavigator/>
+          <AppNavigator ref={navigatorRef => Navigation.setTopLevelNavigator(navigatorRef)}/>
         </Provider>
       </View>
     )
