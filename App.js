@@ -4,9 +4,9 @@ import { createStore, applyMiddleware } from 'redux'
 import { Provider, connect } from 'react-redux'
 import axios from 'axios'
 import axiosMiddleware from 'redux-axios-middleware'
-import AppNavigator from './navigation/AppNavigator'
+import AppNavigator from './src/navigation/AppNavigator'
 
-import reducer from './reducers/index'
+import reducer from './src/reducers/index'
 
 const client = axios.create({
   baseURL: 'https://api.github.com',
