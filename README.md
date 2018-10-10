@@ -23,3 +23,9 @@ $ ../../scripts/ios-configure-glog.sh
 
 To fix RTCWebhook (libfishhook.a)
 > The fix it to open xcode, go to libraries, click on rtcwebsocket, go to its build settings, link binary resources, then remove libfishhook.a and add it back. Its being referenced incorrectly by xcode
+
+### Development Guidelines
+
+**Font Sizes**
+
+https://learnui.design/blog/ios-font-size-guidelines.html

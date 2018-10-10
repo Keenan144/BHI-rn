@@ -9,7 +9,7 @@ import {
   View,
 } from 'react-native'
 
-import colors from '../config/Colors'
+import { background__blue } from '../config/Colors'
 
 
 export default class Home extends React.Component {
@@ -26,6 +26,6 @@ export default class Home extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: colors.background__blue,
+    backgroundColor: background__blue,
   },
 })
