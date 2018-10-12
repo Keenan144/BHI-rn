@@ -1,9 +1,11 @@
 
 import { combineReducers } from 'redux'
 import login from './login'
+import widgets from './widgets'
 
 const appReducer = combineReducers({
-  login
+  login,
+  widgets
 })
 
 export default (state, action) => {
