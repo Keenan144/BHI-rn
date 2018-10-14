@@ -33,7 +33,7 @@ export function refreshWidgets () {
             'imageUrl': 'ocean-storm-matt-dobson.jpg'
           },
           'Events': {
-            'title': 'Howl @ the moon',
+            'title': 'BINGO Night!',
             'description': 'Tuesday @ 7pm, 23 people going',
             'imageUrl': 'crop3.jpg'
           },

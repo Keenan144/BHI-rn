@@ -12,14 +12,9 @@ export default class Home extends React.Component {
     this.refs['homeContainer'].getWrappedInstance().getHomeScreenData()
   }
 
-  static navigationOptions = {
-    header: null,
-  }
-
   render () {
     return (
       <View style={styles.container}>
-        <Header/>
         <HomeContainer ref={'homeContainer'}/>
       </View>
     )
@@ -33,3 +28,7 @@ const styles = StyleSheet.create({
     backgroundColor: background__blue,
   }
 })
+
+Home.navigationOptions = {
+  title: 'Bald Head Island'
+}

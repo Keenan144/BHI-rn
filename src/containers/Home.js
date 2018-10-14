@@ -11,6 +11,7 @@ import { background__blue } from '../config/Colors'
 import Widget from '../components/Widget'
 import { refreshWidgets } from '../actions/widget'
 import AppText from '../components/AppText'
+import Navigation from '../services/Navigation'
 
 class HomeContainer extends React.Component {
 
@@ -39,17 +40,19 @@ class HomeContainer extends React.Component {
       <View style={styles.container}>
         <ScrollView>
           <View style={styles.row}>
-            <Widget style={styles.widget__small} title={tippy.title}
+            <Widget style={styles.widget__small} title={tippy.title} onPress={() => Navigation.navigate('Tippy')}
                     source={require(`../../assets/images/ec047be62531be2a93587a3a60bf3870.jpg`)}/>
-            <Widget style={styles.widget__small} title={ferry.title} source={require('../../assets/images/3322.jpg')}/>
+            <Widget style={styles.widget__small} title={ferry.title} onPress={() => Navigation.navigate('Ferry')}
+                    source={require('../../assets/images/3322.jpg')}/>
           </View>
           <View style={styles.row}>
-            <Widget style={styles.widget__large} title={news.title}
+            <Widget style={styles.widget__large} title={news.title} onPress={() => Navigation.navigate('News')}
                     source={require('../../assets/images/ocean-storm-matt-dobson.jpg')}/>
           </View>
           <View style={styles.row}>
-            <Widget style={styles.widget__small} title={events.title} source={require('../../assets/images/crop3.jpg')}/>
-            <Widget style={styles.widget__small} title={assistance.title}
+            <Widget style={styles.widget__small} title={events.title} onPress={() => Navigation.navigate('Events')}
+                    source={require('../../assets/images/crop3.jpg')}/>
+            <Widget style={styles.widget__small} title={assistance.title} onPress={() => Navigation.navigate('Assistance')}
                     source={require('../../assets/images/photo-1502786965697-c531beea0b4a.jpeg')}/>
           </View>
         </ScrollView>

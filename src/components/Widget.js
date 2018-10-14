@@ -5,7 +5,7 @@ import AppText from './AppText'
 class Widget extends Component {
   render () {
     return (
-      <TouchableOpacity style={[styles.container, this.props.style]}>
+      <TouchableOpacity onPress={this.props.onPress} style={[styles.container, this.props.style]}>
         <ImageBackground
           style={{
             height: '100%',
