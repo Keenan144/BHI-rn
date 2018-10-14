@@ -1,12 +1,12 @@
 import React from 'react'
 import { StyleSheet, View } from 'react-native'
 import WillFocusHook from '../_decorators/WillFocusHook'
-import { background__blue } from '../../config/Colors'
+import { background__blue, background__blue_navy, background__white, text__white } from '../../config/Colors'
 
 import EventContainer from '../../containers/Event'
 
 @WillFocusHook
-export default class Tippy extends React.Component {
+export default class Event extends React.Component {
   componentWillFocus () {
     this.refs['widgetContainer'].getWrappedInstance().getEventData()
   }
@@ -27,3 +27,18 @@ const styles = StyleSheet.create({
     backgroundColor: background__blue,
   }
 })
+
+Event.navigationOptions = {
+  title: 'Upcoming Events',
+  headerTintColor: background__white,
+  headerTitleStyle: {
+    fontSize: 22,
+    fontWeight: '400',
+    color: text__white,
+  },
+  headerStyle: {
+    backgroundColor: background__blue_navy,
+    borderBottomColor: background__blue_navy,
+    margin: 11,
+  }
+}

@@ -8,6 +8,7 @@ import {
 import { refreshWidgets } from '../actions/widget'
 import { background__blue } from '../config/Colors'
 import AppText from '../components/AppText'
+import Home from '../screens/Home'
 
 class TippyContainer extends React.Component {
 
@@ -23,7 +24,6 @@ class TippyContainer extends React.Component {
   }
 
   render () {
-    const { tippy, ferry, news, events, assistance } = this.props.widgets
     if (this.state.loading) {
       return (
         <View>
@@ -34,7 +34,7 @@ class TippyContainer extends React.Component {
     }
     return (
       <View style={styles.container}>
-        <AppText>Hello</AppText>
+        <AppText>Tippy</AppText>
       </View>
     )
   }

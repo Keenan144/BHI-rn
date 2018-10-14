@@ -25,13 +25,12 @@ export default createStackNavigator({
     headerTitleStyle: {
       textAlign: 'left',
       fontSize: 32,
-      padding: 11,
       fontWeight: '400',
       color: text__white,
     },
     headerStyle: {
       backgroundColor: background__blue_navy,
-      margin: 18,
+      margin: 11,
       borderBottomColor: background__blue_navy
     }
   }

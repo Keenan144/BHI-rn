@@ -51,7 +51,7 @@ class HomeContainer extends React.Component {
           </View>
           <View style={styles.row}>
             <Widget style={styles.widget__small} title={events.title} onPress={() => Navigation.navigate('Events')}
-                    source={require('../../assets/images/crop3.jpg')}/>
+                    source={require('../../assets/images/photo-1432071079086-3f012ce3f1ac.jpeg')}/>
             <Widget style={styles.widget__small} title={assistance.title} onPress={() => Navigation.navigate('Assistance')}
                     source={require('../../assets/images/photo-1502786965697-c531beea0b4a.jpeg')}/>
           </View>
