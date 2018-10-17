@@ -3,7 +3,6 @@ import { StyleSheet, View } from 'react-native'
 import WillFocusHook from '../_decorators/WillFocusHook'
 import { background__blue, background__blue_navy, background__white, text__white } from '../../config/Colors'
 
-import Header from '../../components/Header'
 import TippyContainer from '../../containers/Tippy'
 
 @WillFocusHook

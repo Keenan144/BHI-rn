@@ -3,7 +3,7 @@ import { StyleSheet, View } from 'react-native'
 import WillFocusHook from '../_decorators/WillFocusHook'
 import { background__blue, background__blue_navy, background__white, text__white } from '../../config/Colors'
 
-import FerryContainer from '../../containers/Ferry'
+import FerryContainer from '../../containers/Ferry/FerryHome'
 import Header from '../../components/Header'
 
 @WillFocusHook
