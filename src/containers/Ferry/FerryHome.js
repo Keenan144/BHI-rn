@@ -12,6 +12,7 @@ import { background__blue, background__white } from '../../config/Colors'
 
 import AppText from '../../components/AppText'
 import Button from '../../components/Buttons/Button'
+import Navigation from '../../services/Navigation'
 
 const { width, height } = Dimensions.get('window')
 
@@ -49,7 +50,7 @@ class FerryContainer extends React.Component {
             source={require('../../../assets/images/3322.jpg')}/>
         </View>
         <View style={styles.row}>
-          <Button title={'Get Tickets'} fontSize={17} lineHeight={23} onPress={() => console.log('get tickets')}/>
+          <Button title={'Get Tickets'} fontSize={17} lineHeight={23} onPress={() => Navigation.navigate('GetTickets')}/>
           <Button title={'Schedule'} fontSize={17} lineHeight={23} onPress={() => console.log('Show Schedule')}/>
         </View>
         {this.props.tickets &&

@@ -5,6 +5,7 @@ import Assistance from '../screens/widgets/assistance'
 import Events from '../screens/widgets/events'
 import Home from '../screens/Home'
 import Ferry from '../screens/widgets/ferry'
+import GetTickets from '../screens/Ferry/GetTickets'
 import News from '../screens/widgets/news'
 import Tippy from '../screens/widgets/tippy'
 
@@ -16,6 +17,7 @@ export default createStackNavigator({
   Events,
   Home,
   Ferry,
+  GetTickets,
   News,
   Tippy,
 }, {
