@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
 })
 
 Ferry.navigationOptions = {
-  title: 'Bald Head Island Ferry',
+  title: 'Ferry',
   headerTintColor: background__white,
   headerTitleStyle: {
     fontSize: 22,
